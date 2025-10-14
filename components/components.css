@@ -1,0 +1,114 @@
+/* global */
+:root {
+  --color_primary: #ff3131;
+  --color_secondary: #ff8181;
+  --color_tertiary: #b10000;
+  --color_gray_light: #d5d5d5;
+  --color_black: #000000;
+  --color_white: #ffffff;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--color_white);
+}
+/* header y footer */
+
+.header,
+.footer {
+  height: 100px;
+  width: 100%;
+
+  background-color: var(--color_gray_light);
+}
+.footer {
+  background-color: var(--color_black);
+}
+.nav-link {
+  color: var(--color_primary);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* carousel */
+
+.carousel-item .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Ajusta la opacidad según sea necesario */
+}
+.carousel-item .carousel-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  z-index: 2; /* sobre el overlay */
+}
+
+/* form contact */
+
+.contact-container {
+  max-width: 1240px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.form-card,
+.info-card {
+  padding: 32px;
+
+  flex: 1;
+  border-radius: 20px;
+  border: 1.5px solid var(--color_primary);
+}
+.form-card h3,
+.info-card h3 {
+  font-weight: bold;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.form-control {
+  margin-bottom: 15px;
+  padding: 10px 14px;
+}
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-bottom: 18px;
+  font-size: 16px;
+}
+
+.info-item i {
+  font-size: 24px;
+  color: var(--color_black);
+}
+
+/* btns */
+.primary_btn {
+  padding: 16px 32px;
+  background-color: var(--color_tertiary);
+  color: var(--color_white);
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+.primary_btn:hover {
+  background-color: var(--color_secondary);
+}
