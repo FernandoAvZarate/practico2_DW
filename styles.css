@@ -1,0 +1,257 @@
+/* global */
+:root {
+  --color_primary: #ff3131;
+  --color_secondary: #ff8181;
+  --color_tertiary: #b10000;
+  --color_gray_light: #d5d5d5;
+  --color_black: #000000;
+  --color_white: #ffffff;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--color_white);
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* header y footer */
+
+.header,
+.footer {
+  height: 100px;
+  width: 100%;
+
+  background-color: var(--color_gray_light);
+}
+.footer {
+  background-color: var(--color_black);
+}
+.nav-link {
+  color: var(--color_primary);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  color: var(--color_tertiary);
+}
+/* carousel */
+
+/* El contenedor principal ocupa todo el ancho */
+.carousel-wrapper {
+  width: 100%;
+  height: 720px; /* Podés cambiar a 100vh si querés pantalla completa */
+  margin: 0;
+  padding: 0;
+}
+
+/* El carrusel también */
+#miCarousel {
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-inner,
+.carousel-item,
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Overlay */
+.carousel-item .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Contenido centrado */
+.carousel-item .carousel-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  z-index: 2;
+}
+/* parrafo */
+.p_container {
+  margin-top: 72px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  text-align: center;
+  font-size: 24px;
+}
+.p_color {
+  color: var(--color_primary);
+  font-weight: bold;
+}
+.service {
+  margin-top: 72px;
+  padding: 24px;
+  padding-inline: clamp(16px, 8vw, 400px); /* más responsivo */
+  display: flex;
+  flex-wrap: wrap; /* si querés que bajen en pantallas chicas */
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+}
+
+.service__card {
+  flex: 1 1 200px;
+  max-width: 300px;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.one {
+  background-image: url("../public/svg/traslados.svg");
+}
+.two {
+  background-image: url("../public/svg/servicioeventos.svg");
+}
+.three {
+  background-image: url("../public/svg/cobertura24hs.svg");
+}
+/* reseñas */
+.reseñas {
+  margin-block: 72px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 3 columnas */
+  grid-template-rows: repeat(3, 1fr); /* 2 filas con alto fijo (podés ajustarlo) */
+  gap: 10px; /* espacio entre imágenes */
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-grid img {
+  width: 438px;
+  height: 130px;
+  object-fit: cover; /* mantiene la proporción sin deformar */
+  border-radius: 10px;
+}
+.flayer {
+  width: 100%;
+  height: 500px;
+  background-image: url("./public/img/herocontactanos.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.txt__container {
+  padding: 32px;
+  border-radius: 20px;
+  text-align: center;
+  color: var(--color_white);
+}
+/* form contact */
+
+.contact-container {
+  margin-top: 72px;
+
+  max-width: 1240px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.form-card,
+.info-card {
+  padding: 32px;
+
+  flex: 1;
+  border-radius: 20px;
+  border: 1.5px solid var(--color_primary);
+}
+.form-card h3,
+.info-card h3 {
+  font-weight: bold;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.form-control {
+  margin-bottom: 15px;
+  padding: 10px 14px;
+}
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-bottom: 18px;
+  font-size: 16px;
+}
+
+.info-item i {
+  font-size: 24px;
+  color: var(--color_black);
+}
+
+/* map */
+.map {
+  margin-block: 72px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+.map__img {
+  border-radius: 20px;
+  border: 2px solid var(--color_tertiary);
+}
+/* btns */
+.primary_btn {
+  padding: 16px 32px;
+  background-color: var(--color_tertiary);
+  color: var(--color_white);
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+.primary_btn:hover {
+  background-color: var(--color_secondary);
+}
+.card_btn {
+  padding: 8px 16px;
+}
