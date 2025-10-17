@@ -130,13 +130,13 @@ a {
   overflow: hidden;
 }
 .one {
-  background-image: url("../public/svg/traslados.svg");
+  background-image: url("./public/svg/traslados.svg");
 }
 .two {
-  background-image: url("../public/svg/servicioeventos.svg");
+  background-image: url("./public/svg/servicioeventos.svg");
 }
 .three {
-  background-image: url("../public/svg/cobertura24hs.svg");
+  background-image: url("./public/svg/cobertura24hs.svg");
 }
 /* reseñas */
 .reseñas {
