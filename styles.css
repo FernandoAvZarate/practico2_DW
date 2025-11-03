@@ -33,9 +33,7 @@ a {
 }
 .footer {
   background-color: var(--color_black);
-
 }
-
 
 .nav-link {
   color: var(--color_tertiary);
@@ -267,53 +265,50 @@ a {
   padding: 8px 16px;
 }
 
-
 /*estilos de Nosotros.html*/
-    /* Sección pilares */
-    .pilares {
-      border: 1px solid var(--color_primary);
-      border-radius: 12px;
-      padding: 2rem;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
-      background-color: #fff;
-    }
-    .pilares .col-md-4 {
-      margin-bottom: 1.5rem;
-      border: solid 1px var(--color_black);
-      border-radius: 10px;
-      text-align: start;
-    }
-    .pilares .icono {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-    }
+/* Sección pilares */
+.pilares {
+  border: 1px solid var(--color_primary);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  background-color: #fff;
+}
+.pilares .col-md-4 {
+  margin-bottom: 1.5rem;
+  border: solid 1px var(--color_black);
+  border-radius: 10px;
+  text-align: start;
+}
+.pilares .icono {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
 
-    /* Hero */
-    .hero {
-   position: relative;
-    width: 100%;
-    overflow: hidden;
-      
-    }
-    .hero img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    
-    }
-    .hero h2 {
-      position: absolute;
-      bottom: 35%;
-      left: 50%;
-      transform: translateX(-50%);
-      color: #fff;
-      font-weight: 700;
-      text-align: center;
-      font-size: 2rem;
-      text-shadow: 0 0 20px rgba(0,0,0,0.6);
-    }
-    /* Sección card staff */
-    .card {
+/* Hero */
+.hero {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero h2 {
+  position: absolute;
+  bottom: 35%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  font-size: 2rem;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+/* Sección card staff */
+.card {
   background: var(--color_white);
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -360,7 +355,6 @@ a {
   line-height: 1.4;
 }
 
-
 /* estilos de Faqs.html */
 
 .custom-accordion .accordion-item {
@@ -396,7 +390,6 @@ a {
   line-height: 1.6;
 }
 
-
 .cta-box {
   background-color: var(--color_white);
   border: 1px solid var(--color_black);
@@ -404,4 +397,53 @@ a {
   padding: 30px;
   max-width: 1000px;
 }
+/* pagina -> servicio */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px 72px;
+  justify-content: center;
+  justify-items: center; /*  centra cada imagen dentro de su celda */
+}
 
+.image-grid img {
+  width: auto;
+  height: 400px;
+  object-fit: contain;
+  border: 1px solid var(--color_gray_light);
+  display: block;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive: 1 columna en pantallas pequeñas */
+@media (max-width: 768px) {
+  .image-grid {
+    grid-template-columns: 1fr;
+    gap: 16px 16px;
+    justify-items: center; /*  mantiene centrado en mobile */
+  }
+
+  .image-grid img {
+    height: 200px;
+  }
+
+  /* Reordenar imágenes en móvil a 1 4 2 5 3 6 */
+  .image-grid img:nth-child(1) {
+    order: 1;
+  }
+  .image-grid img:nth-child(2) {
+    order: 2;
+  }
+  .image-grid img:nth-child(4) {
+    order: 3;
+  }
+  .image-grid img:nth-child(3) {
+    order: 4;
+  }
+  .image-grid img:nth-child(5) {
+    order: 5;
+  }
+  .image-grid img:nth-child(6) {
+    order: 6;
+  }
+}
