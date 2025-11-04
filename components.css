@@ -1,0 +1,15 @@
+/* btns */
+.primary_btn {
+  padding: 16px 32px;
+  background-color: var(--color_terciary);
+  color: var(--color_white);
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+.primary_btn:hover {
+  background-color: var(--color_secondary);
+  color: var(--color_black);
+}
