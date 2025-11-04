@@ -13,3 +13,8 @@
   background-color: var(--color_secondary);
   color: var(--color_black);
 }
+/* text contrast */
+.color-contrast {
+  color: var(--color_terciary);
+  font-weight: bold;
+}

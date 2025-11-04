@@ -44,10 +44,6 @@
   text-align: center;
   font-size: var(--font_medium);
 }
-.parrafo_color {
-  color: var(--color_terciary);
-  font-weight: bold;
-}
 /* pagina -> inicio -> servicios */
 .service {
   width: 100%;

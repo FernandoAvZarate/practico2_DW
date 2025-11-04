@@ -13,8 +13,10 @@
       rel="stylesheet" />
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <!-- CSS global -->
-    <link rel="stylesheet" href="./styles.css" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./components.css" />
+    <link rel="stylesheet" href="./styles/about.css" />
     <!-- font awesome -->
     <link
       rel="stylesheet"
@@ -26,14 +28,12 @@
   <body>
     <!-- header -->
     <header class="header">
-      <div class="container d-flex justify-content-between align-items-center" style="max-width: 1240px; height: 100%">
+      <!-- contenedor -->
+      <div class="container d-flex justify-content-between align-items-center">
         <!-- Logo -->
-        <div class="logo">
-          <a href="index.html">
-            <img src="./public/svg/logo/3.svg" alt="Logo" style="height: 100px" />
-          </a>
-        </div>
-
+        <a href="index.html">
+          <img src="./public/svg/logo/3.svg" alt="Logo" class="logo_img" />
+        </a>
         <!-- Navegación -->
         <nav>
           <ul class="nav">
@@ -47,111 +47,114 @@
               <a class="nav-link" href="servicios.html">Servicios</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="Faqs.html">Faqs</a>
+              <a class="nav-link" href="faqs.html">Faqs</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="Convenios.html">Convenios</a>
+              <a class="nav-link" href="convenios.html">Convenios</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="Contactanos.html">Contáctanos</a>
+              <a class="nav-link" href="contactanos.html">Contáctanos</a>
             </li>
           </ul>
         </nav>
       </div>
     </header>
-
-    <!-- Hero -->
-  <section class="hero">
-    <img src="./public/img/heronosotros.png" alt="Emergencia médica">
-    <h2>SALVAR VIDAS NO ES UNA OPCIÓN, ES NUESTRA MISIÓN...</h2>
-  </section>
-
-  <!-- Quiénes somos -->
-  <section class="container my-5">
-    <h3 class="text-center fw-bold mb-4">QUIÉNES SOMOS</h3>
-    <p class="text-center mx-auto fs-5" style="max-width: 800px;">
-      <strong class="p_color">ServiSalud</strong> es una empresa dedicada a proporcionar atención médica de emergencia rápida, profesional y humana.
-      Nuestro propósito es estar a tu lado en los momentos más críticos, garantizando una respuesta eficiente y un cuidado de alta calidad.
-    </p>
-  </section>
-
-  <!-- Pilares -->
-  <section class="container pilares mb-5">
-    <h4 class="text-center fw-bold mb-4">Nuestros Pilares Fundamentales</h4>
-    <p class="text-center mb-5">Guiamos cada una de nuestras acciones bajo un estricto código de ética y compromiso con la vida.</p>
-    <div class="row justify-content-center text-center gap-3">
-      <div class="col-md-4 col-lg-3">
-        <div class="icono"><img src="./public/svg/ri_heart-line.svg" alt="Misión"></div>
-        <h5 class="fw-bold">Misión</h5>
-        <p>Salvar vidas y ofrecer atención médica de emergencia excepcional con profesionalismo, rapidez y compasión.</p>
-      </div>
-      <div class="col-md-4 col-lg-3">
-        <div class="icono"><img src="./public/svg/lucide_eye.svg" alt="Visión"></div>
-        <h5 class="fw-bold">Visión</h5>
-        <p>Ser la empresa líder en servicios de emergencias médicas, reconocida por nuestra excelencia operativa y calidad humana.</p>
-      </div>
-      <div class="col-md-4 col-lg-3">
-        <div class="icono"><img src="./public/svg/material-symbols_shield-outline.svg" alt="Valores"></div>
-        <h5 class="fw-bold">Valores</h5>
-        <p>Compromiso, Profesionalismo, Empatía, Integridad y Eficiencia son el núcleo de nuestro trabajo diario.</p>
+    <!-- flayer -->
+    <div class="flayer">
+      <div class="flayer_container">
+        <h1 class="text-white">SALVAR VIDAS NO ES UNA OPCIÓN, ES NUESTRA MISIÓN.</h1>
       </div>
     </div>
-  </section>
-
-  <!-- Equipo -->
-  <section class="equipo text-center">
-    <div class="container">
-      <h4 class="fw-bold mb-3">Conoce a Nuestro Equipo</h4>
-      <p class="mb-5 fs-5">Profesionales dedicados y altamente cualificados, comprometidos con tu bienestar en cada momento.</p>
-
-      <div class="row g-4 justify-content-center">
-        <div class="card">
-          <img src="./public/img/imgcardstaff1.png" alt="Dra. Elena Ríos" class="card-img">
-          <h3 class="card-name">Dra. Elena Ríos</h3>
-          <p class="card-title">Directora Médica</p>
-          <p class="card-desc">
-            Más de 20 años de experiencia en medicina de urgencias. 
-             Líder de nuestro equipo con pasión y mucha dedicación.
-         </p>
+    <!-- main -->
+    <main>
+      <!-- staf -->
+      <section class="container my-5">
+        <h3 class="text-center fw-bold mb-4">QUIÉNES SOMOS</h3>
+        <p class="text-center mx-auto fs-5" style="max-width: 1240px">
+          <span class="color-contrast">ServiSalud</span> es una empresa dedicada a proporcionar atención médica de
+          emergencia rápida, profesional y humana. Nuestro propósito es estar a tu lado en los momentos más críticos,
+          garantizando una respuesta eficiente y un cuidado de alta calidad.
+        </p>
+      </section>
+      <!-- Pilares -->
+      <section class="container pilares mb-5">
+        <h4 class="text-center fw-bold mb-4">NUESTROS PILARES FUNDAMENTALES</h4>
+        <p class="text-center mb-5">
+          Guiamos cada una de nuestras acciones bajo un estricto código de ética y compromiso con la vida.
+        </p>
+        <div class="row justify-content-center text-center gap-3">
+          <div class="col-md-4 col-lg-3">
+            <div class="icono"><img src="./public/svg/ri_heart-line.svg" alt="Misión" /></div>
+            <h5 class="fw-bold">Misión</h5>
+            <p>
+              Salvar vidas y ofrecer atención médica de emergencia excepcional con profesionalismo, rapidez y compasión.
+            </p>
+          </div>
+          <div class="col-md-4 col-lg-3">
+            <div class="icono"><img src="./public/svg/lucide_eye.svg" alt="Visión" /></div>
+            <h5 class="fw-bold">Visión</h5>
+            <p>
+              Ser la empresa líder en servicios de emergencias médicas, reconocida por nuestra excelencia operativa y
+              calidad humana.
+            </p>
+          </div>
+          <div class="col-md-4 col-lg-3">
+            <div class="icono"><img src="./public/svg/material-symbols_shield-outline.svg" alt="Valores" /></div>
+            <h5 class="fw-bold">Valores</h5>
+            <p>
+              Compromiso, Profesionalismo, Empatía, Integridad y Eficiencia son el núcleo de nuestro trabajo diario.
+            </p>
+          </div>
         </div>
-              <div class="card">
-          <img src="./public/img/imgcardstaff2.png" alt="Carlos Vega" class="card-img">
-          <h3 class="card-name">Carlos Vega</h3>
-          <p class="card-title">Jefe de operaciones</p>
-          <p class="card-desc">
-           Experto en logística ambulatoria
-            de emergencia, asegurando una
-            respuesta rápida y eficiente en 
-            cada llamada.
-         </p>
+      </section>
+      <!-- team-->
+      <section class="equipo text-center">
+        <div class="container">
+          <h4 class="fw-bold mb-3">CONOCE A NUESTRO EQUIPO</h4>
+          <p class="mb-5 fs-5">
+            Profesionales dedicados y altamente cualificados, comprometidos con tu bienestar en cada momento.
+          </p>
+          <div class="row g-4 justify-content-center">
+            <div class="card">
+              <img src="./public/img/imgcardstaff1.png" alt="Dra. Elena Ríos" class="card-img" />
+              <h3 class="card-name">Dra. Elena Ríos</h3>
+              <p class="card-title">Directora Médica</p>
+              <p class="card-desc">
+                Más de 20 años de experiencia en medicina de urgencias. Líder de nuestro equipo con pasión y mucha
+                dedicación.
+              </p>
+            </div>
+            <div class="card">
+              <img src="./public/img/imgcardstaff2.png" alt="Carlos Vega" class="card-img" />
+              <h3 class="card-name">Carlos Vega</h3>
+              <p class="card-title">Jefe de operaciones</p>
+              <p class="card-desc">
+                Experto en logística ambulatoria de emergencia, asegurando una respuesta rápida y eficiente en cada
+                llamada.
+              </p>
+            </div>
+            <div class="card">
+              <img src="./public/img/imgcardstaff3.png" alt="Sofía Méndez" class="card-img" />
+              <h3 class="card-name">Sofía Méndez</h3>
+              <p class="card-title">Líder de Paramédicos</p>
+              <p class="card-desc">
+                Capacita y dirige a todo nuestro equipo de paramédicos para garantizar la más alta calidad en atención
+                prehospitalaria.
+              </p>
+            </div>
+            <div class="card">
+              <img src="./public/img/imgcardstaff4.png" alt="Javier Nuñez" class="card-img" />
+              <h3 class="card-name">Javier Nuñez</h3>
+              <p class="card-title">Coordinador General</p>
+              <p class="card-desc">
+                Fundador y pilar de ServiSalud. Su visión y compromiso continúa guiando nuestra misión.
+              </p>
+            </div>
+          </div>
         </div>
-                <div class="card">
-          <img src="./public/img/imgcardstaff3.png" alt="Sofía Méndez" class="card-img">
-          <h3 class="card-name">Sofía Méndez</h3>
-          <p class="card-title">Líder de Paramédicos</p>
-          <p class="card-desc">
-           Capacita y dirige a todo nuestro
-          equipo de paramédicos para
-          garantizar la más alta calidad
-          en atención prehospitalaria.
-         </p>
-        </div>
-                <div class="card">
-          <img src="./public/img/imgcardstaff4.png" alt="Javier Nuñez" class="card-img">
-          <h3 class="card-name">Javier Nuñez</h3>
-          <p class="card-title">Coordinador General</p>
-          <p class="card-desc">
-            Fundador y pilar de ServiSalud. 
-            Su visión y compromiso continúa
-            guiando nuestra misión.
-         </p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-        <!-- footer -->
+      </section>
+    </main>
+    <!-- footer -->
     <footer class="footer">
       <div class="container d-flex justify-content-between align-items-center" style="max-width: 1240px; height: 100%">
         <!-- Redes sociales -->
@@ -175,12 +178,11 @@
         <!-- Logo -->
         <div class="logo">
           <a href="index.html">
-            <img src="./public/svg/logo/2.svg" alt="Logo" style="height: 80px" />
+            <img src="./public/svg/logo/2.svg" alt="Logo" class="logo_img" />
           </a>
         </div>
       </div>
     </footer>
-
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
   </body>
