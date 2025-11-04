@@ -47,7 +47,7 @@
   max-width: 1240px;
   background-color: var(--color_white);
   border: 2px solid var(--color_primary);
-  border-radius: 15px;
+  border-radius: 20px;
   padding: 30px;
 }
 /* Responsive */

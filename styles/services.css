@@ -1,0 +1,57 @@
+/* pagina -> servicio */
+.image-grid {
+  width: 100%;
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--gap_medium);
+  justify-content: center;
+  justify-items: center;
+}
+.image-grid img {
+  height: 400px;
+  object-fit: contain;
+  border: 1px solid var(--color_gray_light);
+  border-radius: 20px;
+  display: block;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+/* pagina -> faqs -> cta */
+.cta-box {
+  max-width: 1240px;
+  background-color: var(--color_white);
+  border: 2px solid var(--color_primary);
+  border-radius: 20px;
+  padding: 30px;
+}
+/* responsive */
+@media (max-width: 768px) {
+  .image-grid {
+    grid-template-columns: 1fr;
+    gap: 16px 16px;
+    justify-items: center; /*  mantiene centrado en mobile */
+  }
+
+  .image-grid img {
+    height: 200px;
+  }
+  /* Reordenar imágenes en móvil a 1 4 2 5 3 6 */
+  .image-grid img:nth-child(1) {
+    order: 1;
+  }
+  .image-grid img:nth-child(2) {
+    order: 2;
+  }
+  .image-grid img:nth-child(4) {
+    order: 3;
+  }
+  .image-grid img:nth-child(3) {
+    order: 4;
+  }
+  .image-grid img:nth-child(5) {
+    order: 5;
+  }
+  .image-grid img:nth-child(6) {
+    order: 6;
+  }
+}
