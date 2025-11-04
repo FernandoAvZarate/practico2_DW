@@ -1,0 +1,59 @@
+/* pagina -> faqs */
+/* pagina -> faqs -> acordeon*/
+.faq-section {
+  width: 100%;
+  background-color: var(--color_white, #fff);
+}
+.custom-accordion {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+.custom-accordion .accordion-item {
+  border: 1px solid #ddd;
+  padding: var(--gap_medium);
+  border-radius: 10px;
+  margin-bottom: 15px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+.accordion-header {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.custom-accordion .accordion-button {
+  background-color: var(--color_white, #fff);
+  color: var(--color_black, #000);
+  font-weight: bold;
+  font-size: var(--font_small);
+  border: none;
+  box-shadow: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.custom-accordion .accordion-button:not(.collapsed) {
+  color: var(--color_black, #000);
+}
+.custom-accordion .accordion-button:focus {
+  box-shadow: none;
+}
+.custom-accordion .accordion-body {
+  margin-top: 12px;
+  background-color: var(--color_white, #fff);
+  color: var(--color_black, #000);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+/* pagina -> faqs -> cta */
+.cta-box {
+  max-width: 1240px;
+  background-color: var(--color_white);
+  border: 2px solid var(--color_primary);
+  border-radius: 15px;
+  padding: 30px;
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .custom-accordion {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+}

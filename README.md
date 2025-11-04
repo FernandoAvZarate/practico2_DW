@@ -1,2 +1,1 @@
-# practico2_DW
-practico numero 2 para la asignatura de diseño web
+# TRABAJO INTEGRADOR DE LA ASIGNATURA DISEÑO WEB 1, COMPUESTO POR LOS ALUMNOS:
