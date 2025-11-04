@@ -447,3 +447,33 @@ a {
     order: 6;
   }
 }
+
+/* pagina -> convenios */
+.image-grid-convenios {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px 32px;
+  justify-content: center;
+  justify-items: center; /*  centra cada imagen dentro de su celda */
+}
+
+.image-grid-convenios img {
+  width: auto;
+  height: 400px;
+  object-fit: contain;
+  border: 1px solid var(--color_gray_light);
+  display: block;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive: 1 columna en pantallas pequeñas */
+@media (max-width: 768px) {
+  .image-grid-convenios {
+    grid-template-columns: 1fr;
+    gap: 16px 16px;
+    justify-items: center; /*  mantiene centrado en mobile */
+  }
+  .image-grid-convenios img {
+    height: 200px;
+  }
+}
