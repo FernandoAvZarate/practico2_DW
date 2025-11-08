@@ -26,38 +26,51 @@
       referrerpolicy="no-referrer" />
   </head>
   <body>
-    <!-- header -->
+    <!-- Header -->
     <header class="header">
-      <!-- contenedor -->
-      <div class="container d-flex justify-content-between align-items-center">
-        <!-- Logo -->
-        <a href="index.html">
-          <img src="./public/svg/logo/3.svg" alt="Logo" class="logo_img" />
-        </a>
-        <!-- Navegación -->
-        <nav>
-          <ul class="nav">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Inicio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="nosotros.html">Nosotros</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="servicios.html">Servicios</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="faqs.html">Faqs</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="convenios.html">Convenios</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contactanos.html">Contáctanos</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
+      <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container d-flex justify-content-between align-items-center">
+          <!-- Logo -->
+          <a class="navbar-brand" href="index.html">
+            <img src="./public/svg/logo/3.svg" alt="Logo" class="logo_img" />
+          </a>
+          <!-- Botón hamburguesa -->
+          <button
+            class="navbar-toggler border-0"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars burger_icon"></i>
+          </button>
+
+          <!-- Navegación -->
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="nosotros.html">Nosotros</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="servicios.html">Servicios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="faqs.html">Faqs</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="convenios.html">Convenios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contactanos.html">Contáctanos</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
     <main>
       <!-- title -->
@@ -96,8 +109,10 @@
             <i class="fa-solid fa-phone"></i>
           </a>
         </div>
-        <div>
-          <p class="text-white">© 2025 ServiSalud. Todos los derechos reservados.</p>
+        <!-- parrafo -->
+        <div class="d-flex flex-column flex-sm-row w-100 h-100 align-items-center justify-content-center">
+          <p class="text-white footer_parrafo">© 2025 ServiSalud.</p>
+          <p class="text-white footer_parrafo">Todos los derechos reservados.</p>
         </div>
         <!-- Logo -->
         <div class="logo">

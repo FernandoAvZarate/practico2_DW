@@ -103,6 +103,10 @@ a {
   }
 }
 @media (max-width: 576px) {
+  main {
+    margin-block: 48px;
+    gap: 48px;
+  }
   .logo_img {
     height: 56px;
   }

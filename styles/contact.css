@@ -53,6 +53,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: var(--gap_medium);
 }
 .info-item {
   display: flex;
@@ -75,4 +76,25 @@
 .map__img {
   border-radius: 20px;
   border: 2px solid var(--color_tertiary);
+}
+.map iframe {
+  width: 992px;
+}
+/* --- Responsive --- */
+@media (max-width: 992px) {
+  .map iframe {
+    width: 576px;
+  }
+}
+@media (max-width: 576px) {
+  .map iframe {
+    width: 380px;
+  }
+  .parrafo {
+    font-size: var(--font_small);
+  }
+  .service_card {
+    width: 300px;
+    height: 300px;
+  }
 }

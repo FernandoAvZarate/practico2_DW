@@ -31,9 +31,8 @@
     gap: 16px 16px;
     justify-items: center; /*  mantiene centrado en mobile */
   }
-
   .image-grid img {
-    height: 200px;
+    height: 300px;
   }
   /* Reordenar imágenes en móvil a 1 4 2 5 3 6 */
   .image-grid img:nth-child(1) {
