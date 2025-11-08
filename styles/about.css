@@ -91,3 +91,10 @@
   margin-top: 8px;
   line-height: 1.4;
 }
+/* --- Responsive --- */
+@media (max-width: 576px) {
+  .pilares {
+    border: none;
+    box-shadow: none;
+  }
+}

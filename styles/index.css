@@ -98,9 +98,6 @@
   display: block;
 }
 /* --- Responsive --- */
-
-@media (max-width: 992px) {
-}
 @media (max-width: 576px) {
   .parrafo {
     font-size: var(--font_small);
