@@ -1,5 +1,4 @@
-/* global */
-
+/* Global */
 :root {
   --color_primary: #ff3131;
   --color_secondary: #ff8181;
@@ -22,9 +21,9 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: var(--color_white);
   background: var(--color_gradient);
 }
+
 main {
   width: 100%;
   margin-block: 72px;
@@ -33,36 +32,85 @@ main {
   align-items: center;
   gap: 72px;
 }
+
 a {
   text-decoration: none;
   color: inherit;
 }
 
-/* layout */
-
+/* Layout general */
 .header,
 .footer {
-  height: 100px;
   width: 100%;
-
   background-color: var(--color_gray_light);
-}
-.container {
-  height: 100%;
-  padding-inline: 0;
-  max-width: 1240px;
 }
 .footer {
   background-color: var(--color_black);
 }
+.container {
+  width: 100%;
+  max-width: 1240px;
+}
+/* Logo */
 .logo_img {
   height: 80px;
+  transition: all 0.2s ease;
+}
+.logo_img:hover {
+  transform: scale(1.05);
+}
+/* Navbar */
+.navbar {
+  background-color: var(--color_gray_light) !important;
+  padding-block: 12px;
+}
+.navbar-nav {
+  gap: var(--gap_medium);
 }
 .nav-link {
-  color: var(--color_primary);
+  color: var(--color_primary) !important;
   font-weight: bold;
-  cursor: pointer;
+  transition: color 0.2s ease;
 }
 .nav-link:hover {
-  color: var(--color_terciary);
+  color: var(--color_terciary) !important;
+}
+/* Toggler (botón hamburguesa) */
+.navbar-toggler {
+  background-color: transparent;
+}
+.burger_icon {
+  font-size: 1.8rem;
+}
+
+/* --- Responsive --- */
+@media (max-width: 992px) {
+  .navbar-nav {
+    background-color: var(--color_gray_light);
+    padding: var(--gap_medium);
+    border-radius: 8px;
+    margin-top: var(--gap_small);
+    align-items: flex-end !important;
+    text-align: right;
+  }
+  .nav-link {
+    display: block;
+    padding: var(--gap_small) 0;
+    text-align: right;
+  }
+  .logo_img {
+    height: 64px;
+  }
+}
+@media (max-width: 576px) {
+  .logo_img {
+    height: 56px;
+  }
+  .navbar {
+    padding-block: 8px;
+  }
+  .footer_parrafo {
+    font-size: 8px;
+    margin: 0;
+  }
 }

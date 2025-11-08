@@ -50,7 +50,9 @@
   max-width: 1240px;
   display: flex;
   justify-content: space-evenly;
+  gap: var(--gap_medium);
   align-items: center;
+  flex-wrap: wrap;
 }
 .service_card {
   width: 350px;
@@ -79,6 +81,7 @@
 .reseñas {
   width: 100%;
   max-width: 1240px;
+  padding-inline: var(--gap_medium);
 
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -93,4 +96,17 @@
   height: auto;
   object-fit: contain;
   display: block;
+}
+/* --- Responsive --- */
+
+@media (max-width: 992px) {
+}
+@media (max-width: 576px) {
+  .parrafo {
+    font-size: var(--font_small);
+  }
+  .service_card {
+    width: 300px;
+    height: 300px;
+  }
 }
