@@ -68,12 +68,12 @@ a {
   gap: var(--gap_medium);
 }
 .nav-link {
-  color: var(--color_primary) !important;
+  color: var(--color_terciary) !important;
   font-weight: bold;
   transition: color 0.2s ease;
 }
 .nav-link:hover {
-  color: var(--color_terciary) !important;
+  color: var(--color_primary) !important;
 }
 /* Toggler (botón hamburguesa) */
 .navbar-toggler {
