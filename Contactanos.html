@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>servisalud</title>
+      <link rel="icon" href="./public/img/favicon.png" type="image/png" />
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,8 +13,10 @@
       rel="stylesheet" />
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <!-- CSS global -->
-    <link rel="stylesheet" href="./styles.css" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./components.css" />
+    <link rel="stylesheet" href="./styles/contact.css" />
     <!-- font awesome -->
     <link
       rel="stylesheet"
@@ -23,51 +26,64 @@
       referrerpolicy="no-referrer" />
   </head>
   <body>
-    <!-- header -->
+ <!-- Header -->
     <header class="header">
-      <div class="container d-flex justify-content-between align-items-center" style="max-width: 1240px; height: 100%">
-        <!-- Logo -->
-        <div class="logo">
-          <a href="index.html">
-            <img src="./public/svg/logo/3.svg" alt="Logo" style="height: 100px" />
+      <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container d-flex justify-content-between align-items-center">
+          <!-- Logo -->
+          <a class="navbar-brand" href="index.html">
+            <img src="./public/svg/logo/4.svg" alt="Logo" class="logo_img" />
           </a>
+          <!-- Botón hamburguesa -->
+          <button
+            class="navbar-toggler border-0"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars burger_icon"></i>
+          </button>
+
+          <!-- Navegación -->
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="nosotros.html">Nosotros</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="servicios.html">Servicios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="faqs.html">Faqs</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="convenios.html">Convenios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contactanos.html">Contáctanos</a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <!-- Navegación -->
-        <nav>
-          <ul class="nav">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Inicio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="nosotros.html">Nosotros</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="servicios.html">Servicios</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="Faqs.html">Faqs</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="Convenios.html">Convenios</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="Contactanos.html">Contáctanos</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
+      </nav>
     </header>
     <!-- flayer -->
     <div class="flayer">
-      <div class="txt__container">
+      <div class="flayer_container">
         <h1 class="text-white">Contáctanos</h1>
-        <p class="fs-4">Estamos aquí para ayudarte. Completa el formulario a continuación o utiliza uno de los métodos para ponerte en contacto.</p>
+        <p class="fs-4 text-white">Estamos aquí para ayudarte. Completa el formulario a continuación o utiliza uno de los métodos para ponerte en contacto.</p>
       </div>
     </div>
-    <!-- form -->
+    <main>
+<!-- form -->
     <div class="container contact-container">
       <!-- Formulario -->
-      <div class="form-card">
+      <div class="form-container">
         <h3>Envíanos un mensaje</h3>
         <form>
           <div class="mb-3">
@@ -91,28 +107,28 @@
           </div>
         </form>
       </div>
-
-
       <!-- Información de contacto -->
-      <div class="info-card">
+      <div class="info-container">
         <h3>Información de contacto</h3>
-
-        <div class="info-item"><i class="fa-solid fa-location-dot"></i> Av. Alem 333, San Juan, Capital.</div>
-        <div class="info-item"><i class="fa-solid fa-phone"></i> 0800-444-1221</div>
-        <div class="info-item"><i class="fa-solid fa-envelope"></i> contacto@servisalud.com</div>
-        <div class="info-item"><i class="fa-brands fa-instagram"></i> @ServiSalud_oficial</div>
-        <div class="info-item"><i class="fa-brands fa-whatsapp"></i>+54 9 (264) 576-4123</div>
-        <div class="info-item"><i class="fa-solid fa-clock"></i>Lunes a Viernes de 8hs a 18hs</div>
+        <div class="info-container-item">
+            <div class="info-item"><i class="fa-solid fa-location-dot"></i> Av. Alem 333, San Juan, Capital.</div>
+            <div class="info-item"><i class="fa-solid fa-phone"></i> 0800-444-1221</div>
+            <div class="info-item"><i class="fa-solid fa-envelope"></i> contacto@servisalud.com</div>
+            <div class="info-item"><i class="fa-brands fa-instagram"></i> @ServiSalud_oficial</div>
+            <div class="info-item"><i class="fa-brands fa-whatsapp"></i>+54 9 (264) 576-4123</div>
+            <div class="info-item"><i class="fa-solid fa-clock"></i>Lunes a Viernes de 8hs a 18hs</div>
+        </div>
       </div>
     </div>
-    <!-- map -->
+      <!-- map -->
       <div class="map">
           <h1 class="text-black">¿Dónde estamos?</h1>
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3400.47245093079!2d-68.53412032350504!3d-31.538646302174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9681402f595e66c3%3A0x86d617d5bbd06cea!2sAv.%20Leandro%20N.%20Alem%20Sur%20333%2C%20J5402DYD%20San%20Juan!5e0!3m2!1ses!2sar!4v1762128183598!5m2!1ses!2sar" 
           width="1240px" height="450px" style="border: 2px solid var(--color_primary); border-radius: 30px" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
-    <!-- footer -->
+    </main>
+ <!-- footer -->
     <footer class="footer">
       <div class="container d-flex justify-content-between align-items-center" style="max-width: 1240px; height: 100%">
         <!-- Redes sociales -->
@@ -130,18 +146,19 @@
             <i class="fa-solid fa-phone"></i>
           </a>
         </div>
-        <div>
-          <p class="text-white">© 2025 ServiSalud. Todos los derechos reservados.</p>
+        <!-- parrafo -->
+        <div class="d-flex flex-column flex-sm-row w-100 h-100 align-items-center justify-content-center">
+          <p class="text-white footer_parrafo">© 2025 ServiSalud.</p>
+          <p class="text-white footer_parrafo">Todos los derechos reservados.</p>
         </div>
         <!-- Logo -->
         <div class="logo">
           <a href="index.html">
-            <img src="./public/svg/logo/2.svg" alt="Logo" style="height: 80px" />
+            <img src="./public/svg/logo/2.svg" alt="Logo" class="logo_img" />
           </a>
         </div>
       </div>
     </footer>
-
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
   </body>

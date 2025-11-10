@@ -1,0 +1,100 @@
+/*pagina -> nosotros*/
+
+/*pagina -> nosotros -> flayer*/
+.flayer {
+  width: 100%;
+  height: 500px;
+  background-image: url("../public/img/heronosotros.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  overflow: hidden;
+}
+.flayer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+}
+.flayer_container {
+  padding: 32px;
+  border-radius: 20px;
+  text-align: center;
+  z-index: 2;
+}
+
+/*pagina -> nosotros -> pilares*/
+.pilares {
+  border: 2px solid var(--color_primary);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  background-color: var(--color_white);
+}
+.pilares .col-md-4 {
+  margin-bottom: 1.5rem;
+  border: solid 2px var(--color_primary);
+  border-radius: 20px;
+  text-align: start;
+}
+.pilares .icono {
+  font-size: var(--font_medium);
+  margin-bottom: 0.5rem;
+}
+/* pagina -> nosotros -> team */
+.card {
+  background: var(--color_white);
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 250px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 20px;
+  align-items: center;
+  cursor: pointer;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+.card-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: 5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+.card-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color_black);
+  margin-top: 10px;
+}
+.card-title {
+  font-size: 0.95rem;
+  color: var(--color_secondary);
+  font-weight: 600;
+  margin-top: 5px;
+}
+.card-desc {
+  font-size: 0.9rem;
+  color: #000000;
+  margin-top: 8px;
+  line-height: 1.4;
+}
+/* --- Responsive --- */
+@media (max-width: 576px) {
+  .pilares {
+    border: none;
+    box-shadow: none;
+  }
+}

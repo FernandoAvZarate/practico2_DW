@@ -13,8 +13,10 @@
       rel="stylesheet" />
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <!-- CSS global -->
-    <link rel="stylesheet" href="./styles.css" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./components.css" />
+    <link rel="stylesheet" href="./styles/faqs.css" />
     <!-- font awesome -->
     <link
       rel="stylesheet"
@@ -24,128 +26,180 @@
       referrerpolicy="no-referrer" />
   </head>
   <body>
-    <!-- header -->
+    <!-- Header -->
     <header class="header">
-      <div class="container d-flex justify-content-between align-items-center" style="max-width: 1240px; height: 100%">
-        <!-- Logo -->
-        <div class="logo">
-          <a href="index.html">
-            <img src="./public/svg/logo/3.svg" alt="Logo" style="height: 100px" />
+      <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container d-flex justify-content-between align-items-center">
+          <!-- Logo -->
+          <a class="navbar-brand" href="index.html">
+            <img src="./public/svg/logo/4.svg" alt="Logo" class="logo_img" />
           </a>
-        </div>
+          <!-- Botón hamburguesa -->
+          <button
+            class="navbar-toggler border-0"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars burger_icon"></i>
+          </button>
 
-        <!-- Navegación -->
-        <nav>
-          <ul class="nav">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Inicio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="nosotros.html">Nosotros</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="servicios.html">Servicios</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="Faqs.html">Faqs</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="Convenios.html">Convenios</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="Contactanos.html">Contáctanos</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
+          <!-- Navegación -->
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="nosotros.html">Nosotros</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="servicios.html">Servicios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="faqs.html">Faqs</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="convenios.html">Convenios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contactanos.html">Contáctanos</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
-    <!-- title -->
-     <section class="container my-5">
-    <h3 class="text-center fw-bold mb-4">PREGUNTAS FRECUENTES</h3>
-    <p class="text-center mx-auto fs-6" style="max-width: 800px;">
-      Despejá tus dudas con nuestras preguntas frecuentes o contactate para una respuesta 
-      adecuada a tus inquietudes.
-    </p>
-  </section>
-
-
-    <!-- acordion items -->
-      <div class="accordion custom-accordion " id="accordionPanelsStayOpenExample" style="max-width: 1000px; margin: 50px auto;">
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="panelsStayOpen-headingOne">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">
-              ¿Qué tipo de emergencias cubren?
-            </button>
-          </h2>
-          <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingOne">
-            <div class="accordion-body">
-              Cubrimos una amplia gama de emergencias médica, incluyendo accidentes, problemas cardíacos, 
-              dificultades respiratorias y traslados interhospitalarios urgentes. Nuestro personal está capacitado
-              para manejar diversas situaciones críticas.
+    <main>
+      <!-- title -->
+      <section class="container">
+        <h3 class="text-center fw-bold mb-4">PREGUNTAS FRECUENTES</h3>
+        <p class="text-center mx-auto fs-5" style="max-width: 1240px">
+          Despejá tus dudas con nuestras preguntas frecuentes o contactate para una respuesta adecuada a tus
+          inquietudes.
+        </p>
+      </section>
+      <!-- Sección FAQ -->
+      <section class="faq-section">
+        <div class="container">
+          <!-- Bootstrap container -->
+          <div class="custom-accordion mx-auto" id="accordionPanelsStayOpenExample">
+            <!-- Item 1 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                  aria-expanded="false"
+                  aria-controls="collapseOne">
+                  ¿Qué tipo de emergencias cubren?
+                </button>
+              </h2>
+              <div
+                id="collapseOne"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingOne"
+                data-bs-parent="#accordionPanelsStayOpenExample">
+                <div class="accordion-body">
+                  Cubrimos una amplia gama de emergencias médicas, incluyendo accidentes, problemas cardíacos,
+                  dificultades respiratorias y traslados urgentes.
+                </div>
+              </div>
+            </div>
+            <!-- Item 2 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="collapseTwo">
+                  ¿Qué costo tiene el servicio de ambulancia?
+                </button>
+              </h2>
+              <div
+                id="collapseTwo"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingTwo"
+                data-bs-parent="#accordionPanelsStayOpenExample">
+                <div class="accordion-body">
+                  El costo varía según la distancia, el tipo de unidad y la urgencia del caso. Podés comunicarte con
+                  nuestro equipo para recibir un presupuesto rápido y personalizado.
+                </div>
+              </div>
+            </div>
+            <!-- Item 3 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree"
+                  aria-expanded="false"
+                  aria-controls="collapseThree">
+                  ¿En qué ciudades tienen cobertura?
+                </button>
+              </h2>
+              <div
+                id="collapseThree"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingThree"
+                data-bs-parent="#accordionPanelsStayOpenExample">
+                <div class="accordion-body">
+                  Brindamos servicio en Capital, Chimbas, Rivadavia, Rawson, Santa Lucía, Pocito, Albardón y Caucete.
+                  Contactanos para confirmar disponibilidad en tu zona.
+                </div>
+              </div>
+            </div>
+            <!-- Item 4 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFour">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseFour"
+                  aria-expanded="false"
+                  aria-controls="collapseFour">
+                  ¿Qué información necesito para solicitar una ambulancia?
+                </button>
+              </h2>
+              <div
+                id="collapseFour"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingFour"
+                data-bs-parent="#accordionPanelsStayOpenExample">
+                <div class="accordion-body">
+                  Al solicitar una ambulancia, te pediremos:
+                  <ul>
+                    <li>Nombre del paciente y tipo de emergencia.</li>
+                    <li>Dirección exacta y referencias del lugar.</li>
+                    <li>Teléfono de contacto.</li>
+                    <li>Destino del traslado (si aplica).</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-              ¿Qué costo tiene el servicio de ambulancia?
-            </button>
-          </h2>
-          <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
-            <div class="accordion-body">
-             El costo del servicio varía según la distancia del traslado, el tipo de unidad requerida (básica o de alta complejidad)
-              y la urgencia del caso. Podés comunicarte con nuestro equipo para recibir un presupuesto rápido y personalizado, 
-              disponible las 24 horas.
-            </div>
-          </div>
-        </div>
-
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="panelsStayOpen-headingThree">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-              ¿En qué ciudades tienen cobertura?
-            </button>
-          </h2>
-          <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
-            <div class="accordion-body">
-             Actualmente brindamos servicio en Capital, Chimbas, Rivadavia, Rawson, Santa Lucía, Pocito, Albardón y Caucete. Si necesitás confirmar disponibilidad en tu ubicación, podés contactarnos y te responderemos de inmediato.
-            </div>
-          </div>
-        </div>
-
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="panelsStayOpen-headingFour">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
-              ¿Qué información necesito para solicitar una ambulancia?
-            </button>
-          </h2>
-          <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFour">
-            <div class="accordion-body">
-              Al solicitar una ambulancia, te pediremos los siguientes datos:
-                <ul>
-                  <li>Nombre del paciente y tipo de emergencia.</li>
-                  <li>Dirección exacta y referencias del lugar.</li>
-                  <li>Teléfono de contacto.</li>
-                  <li>Destino del traslado (en caso de ser necesario).</li>
-                </ul>
-                Con esta información podemos enviar la unidad más cercana en el menor tiempo posible.
-            </div>
-          </div>
-        </div>
+      </section>
+      <!-- div contactar -->
+      <div class="container text-center gap-3 d-flex flex-column align-items-center cta-box">
+        <h3 class="fs-4 fw-bold">¿No encuentras tu respuesta?</h3>
+        <p class="fs-6">
+          Nuestro equipo está listo para ayudarte. Contáctanos para más información o en caso de una emergencia.
+        </p>
+        <a href="Contactanos.html" class="primary_btn">Contactar ahora</a>
       </div>
-      
-    <!-- div contactar -->
-
-    <div class="container text-center mb-5 gap-3 d-flex flex-column align-items-center cta-box">
-      <h3 class="fs-4 fw-bold">¿No encuentras tu respuesta?</h3>
-      <p class="fs-6">Nuestro equipo está listo para ayudarte. Contáctanos para más información o en caso de una emergencia.</p>
-      <a href="Contactanos.html" class="primary_btn">Contactar ahora</a>
-
-    </div>
-
- 
-        <!-- footer -->
+    </main>
+    <!-- footer -->
     <footer class="footer">
       <div class="container d-flex justify-content-between align-items-center" style="max-width: 1240px; height: 100%">
         <!-- Redes sociales -->
@@ -163,13 +217,15 @@
             <i class="fa-solid fa-phone"></i>
           </a>
         </div>
-        <div>
-          <p class="text-white">© 2025 ServiSalud. Todos los derechos reservados.</p>
+        <!-- parrafo -->
+        <div class="d-flex flex-column flex-sm-row w-100 h-100 align-items-center justify-content-center">
+          <p class="text-white footer_parrafo">© 2025 ServiSalud.</p>
+          <p class="text-white footer_parrafo">Todos los derechos reservados.</p>
         </div>
         <!-- Logo -->
         <div class="logo">
           <a href="index.html">
-            <img src="./public/svg/logo/2.svg" alt="Logo" style="height: 80px" />
+            <img src="./public/svg/logo/2.svg" alt="Logo" class="logo_img" />
           </a>
         </div>
       </div>

@@ -1,0 +1,134 @@
+/* Global */
+:root {
+  --color_primary: #ff3131;
+  --color_secondary: #ff8181;
+  --color_terciary: #b10000;
+  --color_gray_light: #d5d5d5;
+  --color_black: #000000;
+  --color_white: #ffffff;
+  --color_gradient: linear-gradient(to bottom, #ffffff 0%, #ffffff 60%, #ff3131 100%);
+  --font_small: 16px;
+  --font_medium: 24px;
+  --font_big: 32px;
+  --gap_small: 8px;
+  --gap_medium: 16px;
+  --gap_big: 32px;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: var(--color_gradient);
+}
+
+main {
+  width: 100%;
+  margin-block: 72px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 72px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Layout general */
+.header,
+.footer {
+  width: 100%;
+  background-color: var(--color_gray_light);
+}
+.footer {
+  background-color: var(--color_black);
+}
+.container {
+  width: 100%;
+  max-width: 1240px;
+}
+/* Logo */
+.logo_img {
+  height: 80px;
+  transition: all 0.2s ease;
+}
+.logo_img:hover {
+  transform: scale(1.05);
+}
+/* Navbar */
+.navbar {
+  background-color: var(--color_gray_light) !important;
+  padding-block: 12px;
+}
+.navbar-nav {
+  gap: var(--gap_medium);
+  align-items: center !important;
+}
+.nav-link {
+  color: var(--color_terciary) !important;
+  font-weight: bold;
+  transition: color 0.2s ease;
+}
+.nav-link:hover {
+  color: var(--color_primary) !important;
+}
+/* Toggler (botón hamburguesa) */
+.navbar-toggler {
+  background-color: transparent;
+  color: var(--color_terciary);
+}
+.burger_icon {
+  font-size: 1.8rem;
+}
+
+/* --- Responsive --- */
+@media (max-width: 992px) {
+  .navbar-nav {
+    background-color: var(--color_gray_light);
+    padding: var(--gap_medium);
+    border-radius: 8px;
+    margin-top: var(--gap_small);
+    align-items: center !important;
+    text-align: center;
+  }
+  .nav-link {
+    display: block;
+    padding: var(--gap_small) 0;
+    text-align: center;
+  }
+  .logo_img {
+    height: 64px;
+  }
+}
+@media (max-width: 576px) {
+  main {
+    margin-block: 48px;
+    gap: 48px;
+  }
+  .logo_img {
+    height: 56px;
+  }
+  .navbar {
+    padding-block: 8px;
+  }
+  .footer_parrafo {
+    font-size: 8px;
+    margin: 0;
+  }
+}
+@media (max-width: 400px) {
+  .logo {
+   display: none;
+  }
+  .footer {
+    text-align: center;
+  }
+  .footer_parrafo {
+    font-size: 10px;
+    margin: 0;
+  }
+}

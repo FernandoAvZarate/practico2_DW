@@ -13,8 +13,10 @@
       rel="stylesheet" />
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <!-- CSS global -->
-    <link rel="stylesheet" href="./styles.css" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./components.css" />
+    <link rel="stylesheet" href="./styles/index.css" />
     <!-- font awesome -->
     <link
       rel="stylesheet"
@@ -24,40 +26,51 @@
       referrerpolicy="no-referrer" />
   </head>
   <body>
-    <!-- header -->
+    <!-- Header -->
     <header class="header">
-      <div class="container d-flex justify-content-between align-items-center" style="max-width: 1240px; height: 100%">
-        <!-- Logo -->
-        <div class="logo">
-          <a href="index.html">
-            <img src="./public/svg/logo/3.svg" alt="Logo" style="height: 100px" />
+      <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container d-flex justify-content-between align-items-center">
+          <!-- Logo -->
+          <a class="navbar-brand" href="index.html">
+            <img src="./public/svg/logo/4.svg" alt="Logo" class="logo_img" />
           </a>
-        </div>
+          <!-- Botón hamburguesa -->
+          <button
+            class="navbar-toggler border-0"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars burger_icon"></i>
+          </button>
 
-        <!-- Navegación -->
-        <nav>
-          <ul class="nav">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Inicio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="nosotros.html">Nosotros</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="servicios.html">Servicios</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="Faqs.html">Faqs</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="Convenios.html">Convenios</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="Contactanos.html">Contáctanos</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
+          <!-- Navegación -->
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="nosotros.html">Nosotros</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="servicios.html">Servicios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="faqs.html">Faqs</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="convenios.html">Convenios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contactanos.html">Contáctanos</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
 
     <!-- carousel -->
@@ -75,7 +88,6 @@
           <button type="button" data-bs-target="#miCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
           <button type="button" data-bs-target="#miCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
-
         <!-- Slides -->
         <div class="carousel-inner h-100">
           <!-- Slide 1 -->
@@ -87,7 +99,6 @@
               <a class="primary_btn" href="./Contactanos.html">Contáctanos</a>
             </div>
           </div>
-
           <!-- Slide 2 -->
           <div class="carousel-item h-100 position-relative">
             <img src="./public/img/ambulancia3.png" alt="Slide 2" />
@@ -97,7 +108,6 @@
               <a class="primary_btn" href="./Servicios.html">Servicios</a>
             </div>
           </div>
-
           <!-- Slide 3 -->
           <div class="carousel-item h-100 position-relative">
             <img src="./public/img/ambulancia4.png" alt="Slide 3" />
@@ -108,7 +118,6 @@
             </div>
           </div>
         </div>
-
         <!-- Controles -->
         <button class="carousel-control-prev" type="button" data-bs-target="#miCarousel" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -120,34 +129,37 @@
         </button>
       </div>
     </div>
-
-    <!-- parrafo -->
-    <div class="container p_container">
-      <div class="p">
-        <p class="fw-bold">En <span class="p_color">ServiSalud</span> nos dedicamos a brindar servicios de ambulancias<br /> 
-          y emergencias médicas con rapidez, seguridad y compromiso.</p>
-        <p class="fw-bold">Nuestro equipo está preparado para acompañarte en cada situación<br />
-          y garantizar la mejor atención. Para lograrlo,<br />contamos con una variedad de servicios diseñados especialmente<br /> 
-          para vos y tu familia. </p>
+    <!-- main -->
+    <main>
+      <!-- parrafo -->
+      <div class="container">
+        <div class="parrafo">
+          <p class="fw-bold">
+            En <span class="color_contrast">ServiSalud</span> nos dedicamos a brindar servicios de ambulancias<br />
+            y emergencias médicas con rapidez, seguridad y compromiso.
+          </p>
+          <p class="fw-bold">
+            Nuestro equipo está preparado para acompañarte en cada situación<br />
+            y garantizar la mejor atención. Para lograrlo,<br />contamos con una variedad de servicios diseñados
+            especialmente<br />
+            para vos y tu familia.
+          </p>
+        </div>
       </div>
-    </div>
-
-    <!-- servicios -->
-    <div class="service">
-      <div class="service__card one">
-        <a href="Contactanos.html" class="primary_btn cardButton">Contratar Servicio</a>
+      <!-- servicios -->
+      <div class="service">
+        <div class="service_card one">
+          <a href="Contactanos.html" class="primary_btn cardButton">Contratar Servicio</a>
+        </div>
+        <div class="service_card two">
+          <a href="Contactanos.html" class="primary_btn cardButton">Contratar Servicio</a>
+        </div>
+        <div class="service_card three">
+          <a href="Contactanos.html" class="primary_btn cardButton">Contratar Servicio</a>
+        </div>
       </div>
-      <div class="service__card two">
-        <a href="Contactanos.html" class="primary_btn cardButton">Contratar Servicio</a>
-      </div>
-      <div class="service__card three">
-        <a href="Contactanos.html" class="primary_btn cardButton">Contratar Servicio</a>
-      </div>
-    </div>
-
-    <!-- reseñas -->
-    <div class="reseñas">
-      <div class="image-grid">
+      <!-- reseñas -->
+      <div class="reseñas">
         <img src="./public/svg/reseña_1.svg" alt="Imagen 1" />
         <img src="./public/svg/reseña_4.svg" alt="Imagen 2" />
         <img src="./public/svg/reseña_2.svg" alt="Imagen 3" />
@@ -155,7 +167,7 @@
         <img src="./public/svg/reseña_3.svg" alt="Imagen 5" />
         <img src="./public/svg/reseña_6.svg" alt="Imagen 6" />
       </div>
-    </div>
+    </main>
 
     <!-- footer -->
     <footer class="footer">
@@ -175,18 +187,19 @@
             <i class="fa-solid fa-phone"></i>
           </a>
         </div>
-        <div>
-          <p class="text-white">© 2025 ServiSalud. Todos los derechos reservados.</p>
+        <!-- parrafo -->
+        <div class="d-flex flex-column flex-sm-row w-100 h-100 align-items-center justify-content-center">
+          <p class="text-white footer_parrafo">© 2025 ServiSalud.</p>
+          <p class="text-white footer_parrafo">Todos los derechos reservados.</p>
         </div>
         <!-- Logo -->
         <div class="logo">
           <a href="index.html">
-            <img src="./public/svg/logo/2.svg" alt="Logo" style="height: 80px" />
+            <img src="./public/svg/logo/2.svg" alt="Logo" class="logo_img" />
           </a>
         </div>
       </div>
     </footer>
-
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
   </body>
